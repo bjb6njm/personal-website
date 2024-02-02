@@ -1,0 +1,28 @@
+---
+import GlobalLayout from '../layouts/GlobalLayout.astro';
+import Window from '../components/Window.astro';
+---
+
+<GlobalLayout pageTitle="HOME">
+
+	<div id="indexcontent-wrapper">
+	<Window title="WELCOME!">
+		Hello! Welcome to my website.
+
+		<p>
+			My name is Brandon Bennett, and I'm currently a student studying Mathematics and Computer Science at the University of Virginia.
+			I made this website with the <a href="https://astro.build">Astro framework</a> to practice web design fundamentals, and to have a place where I can showcase my work.
+		</p>
+
+		Please feel free to browse the links in the navigation bar to check out what I've been up to, or see below for some of my recent Web Log entries.
+	</Window>
+	</div>
+
+</GlobalLayout>
+
+<style>
+	#indexcontent-wrapper{
+		margin-left: 25%;
+		margin-right: 25%;
+	}
+</style>

@@ -1,0 +1,57 @@
+---
+const { title, link } = Astro.props;
+---
+<div class="windowlink-wrapper">
+    <a href={link}>
+        <div class="window">
+            <div class="window-title">
+                <em>>{title}</em>
+            </div>
+
+            <div class="window-content">
+                <slot/>
+            </div>
+        </div>
+    </a>
+</div>
+
+<style>
+    .windowlink-wrapper a{
+        margin: 1em;
+        color: white;
+        text-decoration: none;
+        outline: solid 1px;
+        outline-color: white;
+    }
+
+    .windowlink-wrapper a:hover{
+        outline-color: black;
+    }
+
+    .windowlink-wrapper a:hover .window-content{
+        background-color: white;
+        color: black;
+    }
+
+    .windowlink-wrapper a:hover .window-title{
+        background-color: black;
+        color: white;
+    }
+
+    .windowlink .window {
+        outline-style: solid;
+        outline-width: 1px;
+        width: fit-content;
+    }
+
+    .window-title{
+        background-color: white;
+        color: black;
+        font-size: 1.2em;
+    }
+
+    .window-content{
+        font-size: 1.3em;
+        padding: 1%;
+    }
+</style>

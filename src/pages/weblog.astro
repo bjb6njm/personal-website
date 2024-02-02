@@ -1,0 +1,30 @@
+---
+import GlobalLayout from '../layouts/GlobalLayout.astro';
+import Window from '../components/Window.astro';
+import WindowLink from '../components/WindowLink.astro';
+
+const blogPosts = await Astro.glob('../pages/weblogs/*.md');
+---
+
+<GlobalLayout pageTitle="WEB LOG">
+
+	<div id="weblogcontent-wrapper">
+	<Window title="WEB LOGS">
+        
+        {blogPosts.map((post) =>
+            <WindowLink title={post.frontmatter.title + " [" + post.frontmatter.date + "]"} link={post.url}>
+            {post.frontmatter.description}
+            </WindowLink>
+        )}
+
+	</Window>
+	</div>
+
+</GlobalLayout>
+
+<style>
+	#weblogcontent-wrapper{
+		margin-left: 25%;
+		margin-right: 15%;
+	}
+</style>

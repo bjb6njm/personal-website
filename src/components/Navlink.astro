@@ -1,0 +1,30 @@
+---
+const {url, text} = Astro.props;
+---
+<div class="navlink">
+    <a class="navlink-a" href={url}>
+        >{text}
+    </a>
+</div>
+
+<style>
+    .navlink{
+        margin: 1em;
+        width: 75%;
+    }
+    
+    .navlink-a{
+        text-align: center;
+        background-color: white;
+        color: black;
+        outline-color: white;
+        outline-style: solid;
+        outline-width: 1px;
+        text-decoration: none;
+    }
+
+    .navlink-a:hover{
+        color:white;
+        background-color: black;
+    }
+</style>
