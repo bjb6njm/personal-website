@@ -17,7 +17,7 @@ const { pageTitle } = Astro.props;
             <div id="navbar-wrapper">
                 <Navbar/>
             </div>
-
+            <br>
             <slot/>
 	</body>
 </html>
@@ -26,5 +26,13 @@ const { pageTitle } = Astro.props;
         #navbar-wrapper{
             float: left;
             width: 15%;
+        }
+
+        @media (max-width: 800px) {
+            #navbar-wrapper{
+                float: none;
+                margin-left: 25%;
+		        margin-right: 25%;
+            }
         }
 </style>
