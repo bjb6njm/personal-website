@@ -12,7 +12,7 @@ The first thing I did was reread the C language overview in K&R's "The C Program
 
 Here's a screenshot of the header file:
 
-![cmatrix.h](../../blogimages/blog3/blog3_cmatlibheader.png)
+![cmatrix.h](./blogimages/blog3/blog3_cmatlibheader.png)
 
 The full source code in the .c file will be available on my GitHub within the software-renderer project. But I'd like to make a few comments on what I've done here:
 
@@ -24,7 +24,7 @@ My goal with this project is just to get a neat little software renderer working
 
 After I finished the cmatrix library, I needed a way to internally represent images in my program, so I created screen.h. Here's the header:
 
-![screen.h](../../blogimages/blog3/blog3_screenheader.png)
+![screen.h](./blogimages/blog3/blog3_screenheader.png)
 
 Colors are represented by a 4-index array of fixed 0-255 valued integers, the standard RGBA implementation. The screen in practice is a 1d array of these color values, and is indexed based on x and y position according to a simple formula determined by the screen's width and height value. I'm actually unsure if the alpha channel will be necessary for this software renderer, but I can always change it later if need be to save on memory.
 
@@ -34,6 +34,6 @@ After that, I needed a way to actually get output. I went ahead and found a simp
 
 Anyways, here's a (screenshot of) a 4x4 .tga image where I specifically made the values at (0, 1) and (1, 0) the color black, to prove it works!
 
-![screen.h](../../blogimages/blog3/blog3_checkerboard.png)
+![screen.h](./blogimages/blog3/blog3_checkerboard.png)
 
 It's getting tiring manually compiling and linking object files in the terminal, so I think the next thing I need to do is to refresh myself on how to make/use makefiles. After that, I can begin work on the main rendering pipeline. More to come soon, I hope!
