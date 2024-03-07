@@ -2,7 +2,7 @@
 layout: ../../layouts/WebLogLayout.astro
 title: 'Software Renderer Rewrite, Makefiles, Line Drawing'
 date: '3.6.2024'
-description: "If you're reading this, that means this website is live on the internet!"
+description: "Rewrote some software renderer code, added a Makefile, and implemented a line-drawing algorithm."
 ---
 I've been busy recently and haven't had a ton of time to work on my software renderer, but I've been working on it little by little.
 
