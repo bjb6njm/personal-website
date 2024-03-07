@@ -4,6 +4,7 @@ import Window from '../components/Window.astro';
 import WindowLink from '../components/WindowLink.astro'
 
 const blogPosts = await Astro.glob('../pages/weblogs/*.md');
+const newestBlogPost = blogPosts.reverse()[0];
 ---
 
 <GlobalLayout pageTitle="HOME">
@@ -17,17 +18,21 @@ const blogPosts = await Astro.glob('../pages/weblogs/*.md');
 			I made this website with the <a href="https://astro.build">Astro framework</a> to practice web design fundamentals, and to have a place where I can showcase my work.
 		</p>
 
-		Please feel free to browse the links in the navigation bar to check out what I've been up to, or see below for some of my recent Web Log entries.
+		Please feel free to browse the links in the navigation bar to check out what I've been up to, or see below for my most recent web log.
 	</Window>
 
 	<br>
 
-	<Window title="RECENT WEB LOGS">
-		{blogPosts.reverse().slice(0,2).map((post) =>
+	<Window title="MOST RECENT WEB LOG">
+		<!-- Below is for showing more than one web log. Right now, I only want to show the most recent one. -->
+		<!-- {blogPosts.reverse().slice(0,2).map((post) =>
             <WindowLink title={post.frontmatter.title + " [" + post.frontmatter.date + "]"} link={post.url}>
             {post.frontmatter.description}
             </WindowLink>
-        )}
+        )} -->
+	<WindowLink title={newestBlogPost.frontmatter.title + " [" + newestBlogPost.frontmatter.date + "]"} link={newestBlogPost.url}>
+		{newestBlogPost.frontmatter.description}
+	</WindowLink>
 	</Window>
 	</div>
 
