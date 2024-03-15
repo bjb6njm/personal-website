@@ -6,8 +6,9 @@ description: "Basic rendering pipeline transforms implemented, first visible 3d 
 ---
 For the past few days, I've been working on and off on the software renderer to get some basic 3d output. I've been successful.
 
-First thing I did was use the model data type I made in the model.h header to hardcode in a Unit Cube so that I'd have a model that I could actually render. This was a somewhat time consuming process since I had to define all 12 of the triangles making up the surface of the cube after defining all 8 vertices. I could have done this by making a model in a 3d program and then using some kind of model file reader to bring it into my program, however I'm not ready at this point to make/implement a model file reader, but I will have to do this eventually for more complicated output. Anywhere, here's what hardcoding a unit cube looks like:
+First thing I did was use the model data type I made in the model.h header to hardcode in a Unit Cube so that I'd have a model that I could actually render. This was a somewhat time consuming process since I had to define all 12 of the triangles making up the surface of the cube after defining all 8 vertices. I could have done this by making a model in a 3d program and then using some kind of model file reader to bring it into my program, however I'm not ready at this point to make/implement a model file reader, but I will have to do this eventually for more complicated output
 
+Anyway, here's what hardcoding a unit cube looks like:
 ![Unit Cube Model](/personal-website/blogimages/blog5/blog5_unitcube.png)
 
 Pretty silly, huh?
